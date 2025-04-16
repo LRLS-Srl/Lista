@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<HTML lang="PT-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lista de tarefas</title>
+<Style> 
+    body { 
+
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+
+    H1{
+        text-align: center;
+    }
+
+UL{
+    list-style-type: lower-alpha;
+    padding: 0;
+}
+
+li{
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+</style>
+</head>
+<body>
+
+    <h1> Lista de tarfeas </h1>
+
+    <input type=" text" id="nova tarefa" placeholder="Digite uma tarefa" />
+    <button onclick="adicionarTarefa()"<Adiciomar<button>
+
+<ul id="Lista de tarefas">
+    <!-- As tarefas aparecem aqui-->
+     </ul>
+     
+     <script>
+        function adicionarTarefa(){
+const input = document.getElementById("nova-tarefa");
+const texto = input.value.trim();
+        
+if (texto !== "")  { 
+
+const li = document.createElement("li");
+    li.innerHTML = `${texto} <button onclick="removerTarefa(this)">Excluir</button>`;
+    document.getElementById("lista-tarefas").appenChild(li);
+    input.value = "";
+}
+        }
+        function removerTarefa(botao) {
+            const li = botao.parentElement;
+            li.remove();
+        }
+        </script>
+        </body>
+        </HTML>
+        
