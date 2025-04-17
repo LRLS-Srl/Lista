@@ -45,17 +45,23 @@ button{
 
     <h1> Lista de tarfeas </h1>
 
-    <input type=" text" id="nova tarefa" placeholder="Digite uma tarefa" />
-    <button onclick="adicionarTarefa()"<Adiciomar<button>
+    <input type=" text" id="nova-tarefa" placeholder="Digite uma tarefa" /><ul>id=lista-tarefas>
+    <button onclick="adicionarTarefa()">Adicionar<button>
 
 <ul id="Lista de tarefas">
     <!-- As tarefas aparecem aqui-->
      </ul>
      
+     <!--Aqui posso adicionar mais botões com funções novas parte de javascript-->
      <script>
         function adicionarTarefa(){
 const input = document.getElementById("nova-tarefa");
 const texto = input.value.trim();
+
+function editartarefa(){
+    const input = document.getElementById("editar");
+    const texto = input.value.trim();
+}
         
 if (texto !== "")  { 
 
